@@ -59,7 +59,7 @@ ssl_socket.sync = true
 ssl_socket.connect
 ssl_socket.write(apns_message)
 
-puts 'Waitings server responce...'
+puts 'Waiting server responce...'
 unless IO.select([ssl_socket], nil, nil, SELECT_TIMEOUT)
   puts 'Success'
 else
